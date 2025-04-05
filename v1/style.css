@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Hide scrollbars */
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure body takes full viewport height */
+}
+
+canvas {
+    border: 1px solid white; /* Optional: to see the game boundaries */
+    background-color: black;
+}

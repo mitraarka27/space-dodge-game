@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Dodge</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic styling for elements outside canvas */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: black;
+            color: #ccc;
+            font-family: sans-serif;
+            padding-top: 20px; /* Add padding for title */
+        }
+        .game-title {
+            font-family: "Courier New", Courier, monospace; /* Retro font */
+            font-size: 2.5em; /* Adjust size as needed */
+            font-weight: bold;
+            color: #00FFFF; /* Cyan */
+            text-transform: uppercase;
+            margin-bottom: 15px; /* Space below title */
+            letter-spacing: 2px; /* Techno feel */
+            text-shadow: 2px 2px 4px #008080; /* Optional shadow */
+        }
+        .game-container {
+            position: relative;
+            margin-bottom: 10px; /* Space below canvas */
+        }
+        .stats-container {
+            display: flex;
+            justify-content: space-between; /* Space out score and high score */
+            width: 800px; /* Match canvas width */
+            margin-top: 10px; /* Space above stats */
+            margin-bottom: 5px; /* Space below stats */
+            padding: 0 10px; /* Padding inside container */
+            box-sizing: border-box; /* Include padding in width */
+            font-size: 1.1em;
+            color: white;
+        }
+        .stats-container span { /* Target specific stat elements */
+            display: inline-block; /* Needed for potential spacing */
+        }
+        .stats-container .high-score-section {
+             text-align: right;
+        }
+        .stats-container .games-played {
+             font-size: 0.8em;
+             color: #aaa;
+             margin-left: 15px; /* Space between high score and games played */
+        }
+        .copyright {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 15px; /* More space above copyright */
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. Game Title -->
+    <h1 class="game-title">Space Dodge</h1>
+
+    <!-- Container for the canvas -->
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <!-- 2. Stats Container -->
+    <div class="stats-container">
+        <span id="current-score">Score: 0</span>
+        <span class="high-score-section">
+            <span id="high-score">High Score: 0</span>
+            <span id="games-played" class="games-played">Games Played: 0</span>
+        </span>
+    </div>
+
+    <!-- 3. Copyright -->
+    <div class="copyright">
+        © 2025 ARKA MITRA
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

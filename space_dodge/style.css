@@ -1,0 +1,30 @@
+body {
+    /* Keep existing styles from previous steps */
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #ccc;
+    font-family: sans-serif;
+}
+
+.game-container {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+canvas {
+    border: 1px solid #333;
+    background-color: black;
+    display: block; /* Prevent potential extra space below canvas */
+}
+
+.copyright {
+    font-size: 0.8em;
+    color: #555;
+    margin-top: 5px;
+}
